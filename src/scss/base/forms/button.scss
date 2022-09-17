@@ -1,0 +1,57 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("padding-top", 13, 5);
+	@include adaptiveValue("padding-bottom", 13, 5);
+	@include adaptiveValue("padding-left", 13, 5);
+	@include adaptiveValue("padding-right", 13, 5);
+	@include adaptiveValue("font-size", 16, 12);
+	@include adaptive-value('font-size', 16, 12, 2);
+	font-weight: 700;
+	border-radius: 4px;
+	line-height: math.div(16, 52);
+	min-height: rem(52);
+	min-width: rem(140);
+	border: 2px solid transparent;
+	transition: all 0.3s ease 0s;
+	white-space: nowrap;
+	color: $linkColor;
+
+	@media (any-hover: hover) {
+		&:hover {
+			border: 2px solid $advansedColor;
+			cursor: pointer;
+		}
+	}
+
+	&._fw {
+		width: 100%;
+	}
+}
+
+.button-maincolor {
+	color: #fff;
+	background: $background;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: transparent;
+			color: $linkColor;
+		}
+	}
+}
+
+.button-transparent {
+	color: $linkColor;
+	background: transparent;
+
+	@media (any-hover: hover) {
+		&:hover {
+			border: 2px solid $advansedColor;
+		}
+	}
+}

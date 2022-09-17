@@ -1,0 +1,287 @@
+//=============================================
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(254, 220, 209, 1);
+	z-index: 3;
+
+	&__container {
+		@include adaptiveValue("padding-top", 20, 10);
+		@include adaptiveValue("padding-bottom", 20, 10);
+		display: flex;
+		gap: rem(20);
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__left {
+		display: flex;
+		flex: 1 1 auto;
+		align-items: center;
+		gap: rem(80);
+		@include adaptiveValue("gap", 80, 5);
+
+		& img {
+			@media (max-width:$mobile) {
+				@include adaptiveValue("width", 105, 80);
+			}
+		}
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 3;
+	}
+
+	&__menu {
+		display: flex;
+		flex: 1 1 auto;
+		position: relative;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 36, 20);
+	}
+}
+
+.button {
+	position: relative;
+	z-index: 2;
+}
+
+._icon-logo,
+._icon-person {}
+
+._icon-person::before {
+	position: absolute;
+	left: 0;
+	padding-left: 13px;
+	@include adaptiveValue("font-size", 20, 16);
+	// top: rem(18);
+	display: flex;
+	align-items: center;
+}
+
+.button._icon-person {
+	@include adaptiveValue("padding-left", 41, 30);
+	color: $textColor;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $linkColor;
+		}
+	}
+}
+
+._icon-logo::before {
+	font-size: 20px;
+	color: $advansedColor;
+	position: absolute;
+	right: rem(-24);
+	top: 0;
+	@include adaptiveValue("font-size", 20, 16);
+
+	@media (max-width:$mobile) {}
+}
+
+//=============================================
+
+// Меню - бургер
+.icon-menu {
+	display: none;
+
+	@media (max-width:$mobile) {
+		display: block;
+		position: relative;
+		min-width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 2;
+
+		span,
+		&::before,
+		&::after {
+			content: '';
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				top: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+.menu {
+
+	&__icon {}
+
+	&__body {
+
+		@media (max-width:$mobile) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			transition: all 0.3s ease 0s;
+			overflow: auto;
+			background-color: rgba(254, 220, 209, 1);
+
+			&::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: -100%;
+				transition: all 0.3s ease 0s;
+				width: 100%;
+				@include adaptiveValue("height", 96, 76);
+				background-color: rgba(254, 220, 209, 1);
+				overflow: hidden;
+				z-index: 5;
+			}
+
+			.menu-open & {
+				left: 0;
+
+				&::before {
+					left: 0;
+				}
+
+				& li:nth-child(1),
+				& li:nth-child(2),
+				& li:nth-child(3),
+				& li:nth-child(4),
+				& li:nth-child(5) {
+					// transition: all 0.3s ease 0s;
+					margin-left: inherit;
+				}
+
+				.button-maincolor {
+					margin-left: inherit;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		@include adaptiveValue("row-gap", 20, 10);
+		@include adaptiveValue("column-gap", 40, 10);
+		flex-wrap: wrap;
+		padding: rem(5);
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			gap: rem(30);
+			padding-top: rem(100);
+			padding-left: rem(50);
+			position: relative;
+			z-index: 2;
+
+			& li:nth-child(1) {
+				transition: all 0.3s ease 0s;
+				margin-left: -100%;
+			}
+
+			& li:nth-child(2) {
+				transition: all 0.3s ease 0.05s;
+				margin-left: -100%;
+			}
+
+			& li:nth-child(3) {
+				transition: all 0.3s ease 0.1s;
+				margin-left: -100%;
+			}
+
+			& li:nth-child(4) {
+				transition: all 0.3s ease 0.15s;
+				margin-left: -100%;
+			}
+
+			& li:nth-child(5) {
+				transition: all 0.3s ease 0.2s;
+				margin-left: -100%;
+			}
+
+			.button-maincolor {
+				align-self: start;
+				margin-left: -100%;
+				transition: all 0.3s ease 0.25s;
+			}
+		}
+
+		& a {
+			@include adaptiveValue("font-size", 16, 12);
+			@include adaptive-value('font-size', 16, 12, 2);
+
+			@media (max-width:$mobile) {
+				position: relative;
+				z-index: 2;
+				flex-direction: column;
+				gap: rem(60);
+				font-size: rem(24);
+				font-weight: 700;
+			}
+		}
+
+		& a::after {
+			transition: all 0.3s ease 0s;
+			display: block;
+			content: "";
+			height: 3px;
+			width: 0%;
+			background-color: $advansedColor;
+		}
+
+		& a:hover:after,
+		& a:hover:focus {
+			width: 100%;
+		}
+	}
+
+	&__item {}
+
+	&__link {
+		&:nth-child(2) {
+			@media (max-width:$mobile) {
+				background-color: #fff;
+			}
+		}
+	}
+}
