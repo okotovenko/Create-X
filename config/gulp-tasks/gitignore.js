@@ -11,7 +11,7 @@ export const gitignore = () => {
 		fs.appendFile('./.gitignore', 'dist/\r\n', cb);
 		fs.appendFile('./.gitignore', 'Source/\r\n', cb);
 		fs.appendFile('./.gitignore', 'version.json\r\n', cb);
-		fs.appendFile('./.gitignore', app.buildFolder + '\r\n', cb);
+		// fs.appendFile('./.gitignore', app.buildFolder + '\r\n', cb);
 		fs.appendFile('./.gitignore', '**/*.zip\r\n', cb);
 		fs.appendFile('./.gitignore', '**/*.rar\r\n', cb);
 		//if (projectName !== 'flsStart') del('./.git/');
