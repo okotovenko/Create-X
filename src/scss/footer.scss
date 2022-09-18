@@ -1,3 +1,225 @@
 //====================================================================================================
 
 //====================================================================================================
+
+.footer {
+	background-color: $colorDark;
+	@include adaptiveValue("padding-top", 80, 20);
+	color: #5C5E67;
+
+	&__content {}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("column-gap", 80, 20);
+		@include adaptiveValue("row-gap", 40, 10);
+		@include adaptiveValue("padding-bottom", 60, 20);
+
+		@media (max-width: em(1170)) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		@media (max-width: em(600)) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, auto);
+		}
+	}
+
+	&__logo {
+		position: relative;
+		display: flex;
+		gap: rem(5);
+	}
+
+	._icon-logo::before {
+		@include adaptiveValue("left", 108, 85);
+	}
+
+	&__bottom {
+		padding: rem(20) rem(0);
+		background-color: #292C37;
+	}
+
+	&__contentbottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__rights {
+		display: flex;
+		gap: rem(5);
+	}
+
+	&__go {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 150%;
+
+		@media (max-width: em(600)) {
+			display: none;
+		}
+	}
+}
+
+.top-footer {
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+
+		& img {
+			@media (max-width:$mobile) {
+				@include adaptiveValue("width", 105, 80);
+			}
+		}
+
+		@media (max-width: em(1170)) {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+		}
+
+		@media (max-width: em(600)) {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 24, 12);
+		@include adaptiveValue("margin-bottom", 38, 20);
+		text-align: left;
+		font-size: rem(12);
+		line-height: 150%;
+	}
+
+	&__icons {
+		display: flex;
+		gap: rem(20);
+	}
+
+	&__site {
+		min-width: rem(80);
+	}
+
+	&__courses {
+		min-width: rem(110);
+	}
+
+	&__contacts {
+		& a {
+			display: flex;
+			gap: rem(8);
+		}
+	}
+
+	&__sign {
+		min-width: rem(290);
+
+		& p {
+			font-size: rem(10);
+			line-height: 150%;
+			color: #fff;
+		}
+	}
+
+	._icon-arrow-long {
+		color: red;
+		transform: rotate(180deg);
+	}
+}
+
+.top-footer__contacts {
+	display: flex;
+	flex-direction: column;
+	gap: rem(8);
+
+	& a {
+		@media (any-hover:hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+ul {
+	& li:not(:last-child) {
+		margin-bottom: rem(8);
+	}
+}
+
+.site-spollers__item,
+.courses-spollers__item,
+.top-footer__contacts,
+.top-footer__sign {
+	display: flex;
+	flex-direction: column;
+	gap: rem(12);
+	align-items: start;
+}
+
+form {
+	width: 100%;
+	padding-left: rem(12);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.12);
+	border-radius: 4px;
+	display: flex;
+	gap: rem(5);
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.input {
+	background: transparent;
+	padding: rem(9) rem(12);
+	width: 100%;
+	position: relative;
+}
+
+._icon-facebook::before,
+._icon-twitter::before,
+._icon-youtube::before,
+._icon-telegram::before,
+._icon-instagram::before,
+._icon-in::before,
+._icon-arrow-long::before {
+	color: #5C5E67;
+}
+
+._icon-facebook,
+._icon-twitter,
+._icon-youtube,
+._icon-telegram,
+._icon-instagram,
+._icon-in {
+	@media (any-hover:hover) {
+		&:hover {
+			cursor: pointer;
+
+			&::before {
+				color: #fff;
+			}
+		}
+	}
+}
+
+._icon-mobile::before,
+._icon-mail::before {
+	font-size: rem(16);
+}
+
+._icon-heart {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: rem(5);
+}
+
+._icon-heart::before {
+	color: $linkColor;
+}
