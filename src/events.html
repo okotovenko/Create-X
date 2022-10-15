@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Events</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-white.htm',{})
+		<section class="lectures lectures-page page">
+			<div class="lectures__container">
+				<div class="lectures__content">
+					<div class="lectures__subtitle subtitle">Our events</div>
+					<div class="lectures__title title">Lectures, workshops & master-classes</div>
+					<div class="lectures__form form-lectures">
+						<div class="form-lectures__category">
+							<p>Event category</p>
+							<select name="category" id="category">
+								<option value="#">all themes</option>
+								<option value="#">Onine master-class</option>
+								<option value="#">Onine lecture</option>
+								<option value="#">Onine workshop</option>
+								<option value="#">Onine lecture</option>
+							</select>
+						</div>
+						<div class="form-lectures__sort">
+							<p>Sort by</p>
+							<select name="sort" id="sort">
+								<option value="#">newest</option>
+								<option value="#">name</option>
+							</select>
+						</div>
+						<div class="form-lectures__show">
+							<p>Show</p>
+							<form action="#" class="form-lectures__form">
+								<div class="form-lectures__arrow _icon-triangle-down"></div>
+								<div class="form-lectures__arrow _icon-triangle-up"></div>
+								<input type="text" value="9">
+							</form>
+							<p><span>events per page</span></p>
+						</div>
+						<div class="form-lectures__search">
+							<form action="" class="search-form _icon-search">
+								<input type="text" name="text" class="search" placeholder="Search event...">
+							</form>
+						</div>
+						<div class="form-lectures__icons">
+							<div class="icons-form-lectures list _icon-list active"></div>
+							<div class="icons-form-lectures tile _icon-tile"></div>
+						</div>
+					</div>
+					<div class="lectures__items" id="lectures-items">
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">05</div>
+								<div class="item-lectures__month month-list">August</div>
+								<div class="item-lectures__time time-list">11:00 – 14:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">Formation of the organizational structure of the
+									company in
+									the face of uncertainty.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine master-class</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">23</div>
+								<div class="item-lectures__month month-list">July</div>
+								<div class="item-lectures__time time-list">11:00 – 12:30</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">Building a customer service department. Best
+									Practices.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine lecture</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">16</div>
+								<div class="item-lectures__month month-list">July</div>
+								<div class="item-lectures__time time-list">11:00 – 13:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">How to apply methods of speculative design in
+									practice. Worldbuilding prototyping.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine workshop</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">10</div>
+								<div class="item-lectures__month month-list">July</div>
+								<div class="item-lectures__time time-list">09:00 – 14:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">Find and evaluate: search and assessment tools for
+									candidates.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine workshop</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">27</div>
+								<div class="item-lectures__month month-list">June</div>
+								<div class="item-lectures__time time-list">15:00 – 19:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">Connection to Microsoft Excel and Google Sheets,
+									Data Visualization in Power BI.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine master-class</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">15</div>
+								<div class="item-lectures__month month-list">June</div>
+								<div class="item-lectures__time time-list">10:00 – 12:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">Marketing or growth hacking: main differences and
+									what business needs.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine lecture</div>
+							</div>
+							<a href="event.html" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">02</div>
+								<div class="item-lectures__month month-list">June</div>
+								<div class="item-lectures__time time-list">11:00 – 13:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">How to brief a client and present your design to
+									approve it from the first show.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine lecture</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">29</div>
+								<div class="item-lectures__month month-list">May</div>
+								<div class="item-lectures__time time-list">11:00 – 12:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">Who is a project manager and do I want to be PM?
+								</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine lecture</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+						<div class="lectures__item item-lections-list">
+							<div class="item-lectures__date date-list">
+								<div class="item-lectures__number number-list">18</div>
+								<div class="item-lectures__month month-list">May</div>
+								<div class="item-lectures__time time-list">10:00 – 12:00</div>
+							</div>
+							<div class="item-lectures__text text-lections text-lections-list">
+								<div class="text-lectures__title title-list">The company's business page as an additional tool
+									to support the announcement of vacancies.</div>
+								<div class="text-lectures__subtitle subtitle-list">Onine lecture</div>
+							</div>
+							<a href="#" class="item-lectures__button button button-border">View more</a>
+						</div>
+					</div>
+					@@include('html/_pagging.htm',{})
+				</div>
+			</div>
+			<div class="lectures__dots dots">
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-1">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-2">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-3">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-4">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-5">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-6">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" data-prlx-dxr class="dots-7">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-8"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-9"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-10"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-11"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-12"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-13"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" data-prlx-dxr class="dots-14"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-15"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-18"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-16"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-17"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-19"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-20"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" data-prlx-dxr class="dots-21"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-22"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-23"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-24"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-25"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-26"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-27"></div>
+				<div data-prlx-mouse data-prlx-cx="4" data-prlx-cy="5" class="dots-28"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-29"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-30"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-31"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-32"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-33"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-34"></div>
+				<div data-prlx-mouse data-prlx-cx="3" data-prlx-cy="5" class="dots-35"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-36"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-37"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-38"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-39"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-40"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-41"></div>
+				<div data-prlx-mouse data-prlx-cx="2" data-prlx-cy="5" class="dots-42"></div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-43">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-44">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-45">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-46">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-47">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-48">
+				</div>
+				<div data-prlx-mouse data-prlx-cx="1" data-prlx-cy="5" class="dots-49">
+				</div>
+			</div>
+			<div data-prlx-mouse data-prlx-cx="25" data-prlx-cy="30" class="lectures__circle circle circle-222"></div>
+			<div data-prlx-mouse data-prlx-cx="30" data-prlx-cy="30" class="lectures__circle circle circle-284"></div>
+		</section>
+		@@include('html/_form.htm',{})
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

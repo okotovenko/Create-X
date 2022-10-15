@@ -46,6 +46,20 @@
 		align-items: center;
 		@include adaptiveValue("gap", 36, 20);
 	}
+
+	._icon-person::before {
+		position: absolute;
+		left: 0;
+		padding-left: 13px;
+		@include adaptiveValue("font-size", 20, 16);
+		// top: rem(18);
+		display: flex;
+		align-items: center;
+	}
+}
+
+.header-white {
+	background-color: #fff;
 }
 
 .button {
@@ -56,15 +70,15 @@
 ._icon-logo,
 ._icon-person {}
 
-._icon-person::before {
-	position: absolute;
-	left: 0;
-	padding-left: 13px;
-	@include adaptiveValue("font-size", 20, 16);
-	// top: rem(18);
-	display: flex;
-	align-items: center;
-}
+// ._icon-person::before {
+// 	position: absolute;
+// 	left: 0;
+// 	padding-left: 13px;
+// 	@include adaptiveValue("font-size", 20, 16);
+// 	// top: rem(18);
+// 	display: flex;
+// 	align-items: center;
+// }
 
 .button._icon-person {
 	@include adaptiveValue("padding-left", 41, 30);

@@ -4,6 +4,9 @@
 .page {
 	position: relative;
 	overflow: hidden;
+	@extend %blockColor;
+	@include adaptiveValue("padding-top", 200, 100);
+	@include adaptiveValue("padding-bottom", 80, 30);
 
 	&__container {
 		position: relative;
@@ -185,17 +188,17 @@
 		}
 	}
 
-	.circle-125 {
+	.circle-125 & {
 		left: -62.5px;
 		bottom: -62.5px;
 	}
 
-	.circle-222 {
+	.circle-222 & {
 		left: -111px;
 		bottom: -111px;
 	}
 
-	.circle-284 {
+	.circle-284 & {
 		left: -142px;
 		bottom: -142px;
 	}
@@ -602,6 +605,13 @@
 
 		&__bottom {}
 	}
+
+	.text-lections-list {
+		@media (max-width:$mobile) {
+			align-items: center;
+			text-align: center;
+		}
+	}
 }
 
 .bottom-lections {
@@ -746,7 +756,7 @@
 
 	&__content {
 		@include adaptiveValue("padding-top", 160, 20);
-		@include adaptiveValue("padding-bottom", 100, 20);
+		@include adaptiveValue("padding-bottom", 40, 20);
 	}
 
 	&__top {
@@ -812,7 +822,7 @@
 			&:hover {
 				cursor: pointer;
 				transition: all 0.3s ease 0s;
-				z-index: 10;
+				z-index: 2;
 
 				.swiper-slide-team__links,
 				&::after {
@@ -865,6 +875,12 @@
 		text-align: center;
 		color: #787A80
 	}
+
+	._icon-facebook,
+	._icon-instagram,
+	._icon-in {
+		color: #fff;
+	}
 }
 
 .swiper {}
@@ -875,173 +891,13 @@
 
 .bottom-team {}
 
-._icon-facebook,
-._icon-instagram,
-._icon-in {
-	color: #fff;
-}
+
 
 ._icon-arrow-long {
 	font-size: rem(16);
 }
 
-//================
-
-.bottom-team {
-	position: relative;
-
-	&__subtitle {
-		text-align: center;
-	}
-
-	&__title {
-		text-align: center;
-		@include adaptiveValue("margin-bottom", 60, 20);
-	}
-
-	&__slider {
-		width: 82%;
-		margin: 0 auto;
-
-		@media (max-width:$mobile) {
-			width: 100%;
-		}
-	}
-
-	&__wrapper {}
-
-	&__slide {
-
-		background-color: #fff;
-		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-		border-radius: 4px;
-		@include adaptiveValue("padding-top", 64, 20);
-		@include adaptiveValue("padding-bottom", 64, 20);
-		@include adaptiveValue("padding-left", 163, 20);
-		@include adaptiveValue("padding-right", 105, 20);
-	}
-
-	&__swiper-button-prev {
-		position: absolute;
-		top: 60%;
-		left: 0;
-
-		@media (max-width:$mobile) {
-			display: none;
-		}
-	}
-
-	&__swiper-button-next {
-		position: absolute;
-		top: 60%;
-		right: 0;
-
-		@media (max-width:$mobile) {
-			display: none;
-		}
-	}
-}
-
-.swiper-slide-bottom {
-
-	&__text {
-		font-weight: 400;
-		font-size: rem(20);
-		line-height: 150%;
-		margin-bottom: rem(24);
-		position: relative;
-
-		&::before,
-		&::after {
-			content: '';
-			background-image: url(../img/team/ic.svg);
-			position: absolute;
-			top: 8px;
-			width: 10px;
-			height: 20px;
-
-			@media (max-width:$mobileSmall) {
-				display: none;
-			}
-		}
-
-		&::before {
-			left: -30px;
-
-			@media (max-width: em(580)) {
-				left: -18px;
-			}
-		}
-
-		&::after {
-			left: -58px;
-
-			@media (max-width: em(580)) {
-				left: -36px;
-			}
-		}
-	}
-
-	&__info {
-		display: flex;
-		align-items: center;
-		gap: rem(20);
-	}
-
-	&__logo-ibg {
-		width: 72px;
-		height: 72px;
-		border-radius: 50%;
-	}
-
-	&__name {}
-
-	&__top {
-		font-weight: 700;
-		font-size: rem(16);
-		line-height: 160%;
-		margin-bottom: rem(4);
-	}
-
-	&__down {
-		font-size: rem(14);
-		line-height: 150%;
-		color: #787A80;
-	}
-}
-
-.swiper-pagination {}
-
-.swiper-pagination-bullet {
-	width: 30px;
-	height: 0px;
-	background-color: #5a5e6d;
-	border: 1px solid #5a5e6d;
-
-	@media (any-hover:hover) {
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-.swiper-pagination-bullet-active {
-	border: 1px solid $linkColor;
-	background-color: $linkColor;
-}
-
-.swiper-pagination-bottom {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	gap: rem(12);
-	position: absolute;
-	left: 0;
-	@include adaptiveValue("bottom", -60, -10);
-	// bottom: rem(-60);
-}
-
-.bottom-team {
+.top-team {
 
 	&__1-1 {
 		position: absolute;
@@ -1071,36 +927,6 @@
 		pointer-events: none;
 	}
 
-	&__3-1 {
-		position: absolute;
-		top: prc(748, 1570);
-		left: prc(1170, 1920);
-		pointer-events: none;
-	}
-
-	&__3-2 {
-		position: absolute;
-		top: prc(748, 1570);
-		left: prc(1210, 1920);
-		pointer-events: none;
-	}
-
-	&__3-3 {
-		position: absolute;
-		top: prc(748, 1570);
-		left: prc(1242, 1920);
-		pointer-events: none;
-	}
-
-	&__4-1 {
-		position: absolute;
-		top: prc(84, 1570);
-		left: prc(204, 1920);
-		pointer-events: none;
-	}
-
-	&__circle {}
-
 	&__dots {
 		&>div {
 			background-color: #fff;
@@ -1108,53 +934,11 @@
 	}
 }
 
-.bottom-team-circle-125 {
-	position: absolute;
-	top: prc(940, 1570);
-	left: prc(180, 1920);
-	pointer-events: none;
-}
 
-.bottom-team-circle-222 {
-	position: absolute;
-	top: prc(885, 1570);
-	left: prc(115, 1920);
-	pointer-events: none;
-}
-
-.bottom-team-circle-284 {
-	position: absolute;
-	top: prc(849, 1570);
-	left: prc(75, 1920);
-	pointer-events: none;
-}
-
-.bottom-team-circle-222-bottom {
-	position: absolute;
-	bottom: -75px;
-	right: -111px;
-	pointer-events: none;
-}
-
-.bottom-team-circle-284-bottom {
-	position: absolute;
-	bottom: -95px;
-	right: -142px;
-	pointer-events: none;
-}
-
-.bottom-team-dots-top {
+.top-team-dots-top {
 	position: absolute;
 	top: prc(35, 1570);
 	left: prc(1252, 1920);
-	pointer-events: none;
-	transform: rotate(90deg);
-}
-
-.bottom-team-dots-bottom {
-	position: absolute;
-	bottom: prc(20, 1570);
-	left: prc(240, 1920);
 	pointer-events: none;
 	transform: rotate(90deg);
 }
@@ -1381,15 +1165,19 @@
 			}
 
 			& input {
+				background-color: #fff;
 				padding: rem(13) rem(10);
 				flex: 1 1 auto;
 				border-radius: 4px;
 				line-height: 160%;
 				color: #9A9CA5;
 				border: none;
+				order: 1;
 			}
 
 			& button {
+				order: 2;
+
 				@media (max-width:$mobile) {
 					align-self: center;
 				}

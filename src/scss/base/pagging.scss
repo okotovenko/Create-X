@@ -2,18 +2,50 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+
 	// .pagging__arrow
-	&__arrow {
-	}
+	&__arrow {}
+
 	// .pagging__list
 	&__list {
 		display: flex;
+		gap: rem(20);
+		align-items: center;
+
 		li {
+			align-items: center;
+
+			& a {
+				font-weight: 700;
+				line-height: 160%;
+
+				@media (any-hover:hover) {
+					&:hover {
+						color: $linkColor;
+					}
+				}
+			}
 		}
 	}
+
 	// .pagging__item
 	&__item {
+		height: 100%;
+
 		&._active {
+			color: $linkColor;
+		}
+	}
+
+	._icon-arrow-long {
+		transform: rotate(180deg);
+		padding-right: rem(20);
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $linkColor;
+			}
 		}
 	}
 }

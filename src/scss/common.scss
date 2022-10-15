@@ -5,10 +5,10 @@
 
 .wrapper {
 	.page {
-		@extend %blockColor;
-		padding-top: rem(200);
-		@include adaptiveValue("padding-top", 200, 100);
-		@include adaptiveValue("padding-bottom", 80, 30);
+		// @extend %blockColor;
+		// padding-top: rem(200);
+		// @include adaptiveValue("padding-top", 200, 100);
+		// @include adaptiveValue("padding-bottom", 80, 30);
 	}
 }
 
@@ -404,6 +404,18 @@
 	}
 }
 
+.top-btn-development {
+	background-color: #7772F1;
+
+	@media (any-hover:hover) {
+		&:hover {
+			color: #7772F1;
+			border: 1px solid #7772F1;
+		}
+	}
+}
+
+
 //=======================================courses=============================================================
 
 .center-text {
@@ -525,6 +537,256 @@
 	line-height: 160%;
 	color: #787A80;
 }
+
+//================================slider-big======================
+
+.slider-big {
+	overflow: hidden;
+	object-fit: cover;
+	position: relative;
+	background-color: #F4F5F7;
+
+	&__container {}
+}
+
+.bottom-team {
+	position: relative;
+	@include adaptiveValue("padding-top", 40, 20);
+	@include adaptiveValue("padding-bottom", 100, 20);
+
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiveValue("margin-bottom", 60, 20);
+	}
+
+	&__slider {
+		width: 82%;
+		margin: 0 auto;
+
+		@media (max-width:$mobile) {
+			width: 100%;
+		}
+	}
+
+	&__wrapper {}
+
+	&__slide {
+
+		background-color: #fff;
+		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+		border-radius: 4px;
+		@include adaptiveValue("padding-top", 64, 20);
+		@include adaptiveValue("padding-bottom", 64, 20);
+		@include adaptiveValue("padding-left", 163, 20);
+		@include adaptiveValue("padding-right", 105, 20);
+	}
+
+	&__swiper-button-prev {
+		position: absolute;
+		top: 60%;
+		left: 0;
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
+	}
+
+	&__swiper-button-next {
+		position: absolute;
+		top: 60%;
+		right: 0;
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
+	}
+}
+
+.swiper-slide-bottom {
+
+	&__text {
+		font-weight: 400;
+		font-size: rem(20);
+		line-height: 150%;
+		margin-bottom: rem(24);
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			background-image: url(../img/team/ic.svg);
+			position: absolute;
+			top: 8px;
+			width: 10px;
+			height: 20px;
+
+			@media (max-width:$mobileSmall) {
+				display: none;
+			}
+		}
+
+		&::before {
+			left: -30px;
+
+			@media (max-width: em(580)) {
+				left: -18px;
+			}
+		}
+
+		&::after {
+			left: -58px;
+
+			@media (max-width: em(580)) {
+				left: -36px;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+	}
+
+	&__logo-ibg {
+		width: 72px;
+		height: 72px;
+		border-radius: 50%;
+	}
+
+	&__name {}
+
+	&__top {
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 160%;
+		margin-bottom: rem(4);
+	}
+
+	&__down {
+		font-size: rem(14);
+		line-height: 150%;
+		color: #787A80;
+	}
+}
+
+.swiper-pagination {}
+
+.swiper-pagination-bullet {
+	width: 30px;
+	height: 0px;
+	background-color: #5a5e6d;
+	border: 1px solid #5a5e6d;
+
+	@media (any-hover:hover) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.swiper-pagination-bullet-active {
+	border: 1px solid $linkColor;
+	background-color: $linkColor;
+}
+
+.swiper-pagination-bottom {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: rem(12);
+	position: absolute;
+	left: 0;
+	@include adaptiveValue("bottom", 60, 10);
+	// bottom: rem(-60);
+}
+
+.slider-big {
+
+	&__3-1 {
+		position: absolute;
+		top: prc(300, 1570);
+		left: prc(1170, 1920);
+		pointer-events: none;
+	}
+
+	&__3-2 {
+		position: absolute;
+		top: prc(300, 1570);
+		left: prc(1210, 1920);
+		pointer-events: none;
+	}
+
+	&__3-3 {
+		position: absolute;
+		top: prc(300, 1570);
+		left: prc(1242, 1920);
+		pointer-events: none;
+	}
+
+	&__4-1 {
+		position: absolute;
+		top: prc(84, 1570);
+		left: prc(204, 1920);
+		pointer-events: none;
+	}
+
+	&__circle {}
+
+	&__dots {
+		&>div {
+			background-color: #fff;
+		}
+	}
+}
+
+.slider-big-circle-125 {
+	position: absolute;
+	top: prc(440, 1570);
+	left: prc(180, 1920);
+	pointer-events: none;
+}
+
+.slider-big-circle-222 {
+	position: absolute;
+	top: prc(385, 1570);
+	left: prc(115, 1920);
+	pointer-events: none;
+}
+
+.slider-big-circle-284 {
+	position: absolute;
+	top: prc(349, 1570);
+	left: prc(75, 1920);
+	pointer-events: none;
+}
+
+.slider-big-circle-222-bottom {
+	position: absolute;
+	bottom: -75px;
+	right: -111px;
+	pointer-events: none;
+}
+
+.slider-big-circle-284-bottom {
+	position: absolute;
+	bottom: -95px;
+	right: -142px;
+	pointer-events: none;
+}
+
+.slider-big-dots-bottom {
+	position: absolute;
+	bottom: prc(20, 1570);
+	left: prc(240, 1920);
+	pointer-events: none;
+	transform: rotate(90deg);
+}
+
 
 //==========================================swiper==========================================================
 
@@ -654,4 +916,64 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: #fff;
+
+	._spoller-init & {
+
+		&::before,
+		&::after {
+			background-color: #fff;
+		}
+	}
+}
+
+//==================Page course==block about==================================
+
+
+.about-top {
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: $colorDark;
+}
+
+.about-center {
+	font-weight: 700;
+	font-size: rem(24);
+	line-height: 130%;
+	color: $linkColor;
+	padding: rem(4) rem(0) rem(8) rem(0);
+}
+
+.about-bottom {
+	font-size: rem(16);
+	line-height: 160%;
+	color: #787A80;
+}
+
+//============================Page post==================================
+
+.share {
+	display: flex;
+	align-items: center;
+	gap: rem(12);
+
+	& p {
+		line-height: 160%;
+		color: $colorDark;
+	}
+
+	._icon-facebook,
+	._icon-twitter,
+	._icon-in {
+		@media (any-hover:hover) {
+			&:hover {
+				cursor: pointer;
+
+				&::before {
+					color: $advansedColor;
+				}
+			}
+		}
+	}
 }

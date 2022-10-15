@@ -1,10 +1,40 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+<div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__title">Sign in</div>
+			<div class="popup__subtitle">Sign in to your account using email and password provided during
+				registration.</div>
+			<form action="#" class="popup__form">
+				<div class="popup__mail">
+					<p>Email</p>
+					<input type="text" name="form[email]" data-error="Error" placeholder="Your working email" class="input">
+				</div>
+				<div class="popup__password">
+					<p>Password</p>
+					<input type="password" minlength="8">
+				</div>
+				<div class="popup__forgot">
+					<div class="event-form__checkbox">
+						<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Keep me signed in</span></label>
+						<a href="#" class="popup__question">Forgot password?</a>
+					</div>
+				</div>
+				<button type="submit" class="button button-maincolor">Sign in</button>
+				<div class="popup__dont">
+					Don't have an account? <span><a href="#">Sign up</a></span>
+				</div>
+			</form>
+			<div class="popup__social">
+				<p>Or sign in with</p>
+				<div class="popup__link">
+					<a href="#" class="_icon-facebook"></a>
+					<a href="#" class="_icon-instagram"></a>
+					<a href="#" class="_icon-twitter"></a>
+					<a href="#" class="_icon-in"></a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>

@@ -1,0 +1,294 @@
+	.courses-page {
+		background: #fff;
+		@include adaptiveValue("padding-top", 170, 40);
+		@include adaptiveValue("padding-bottom", 120, 20);
+		position: relative;
+
+		&__content {}
+
+		&__subtitle {}
+
+		&__title {}
+
+		&__categoriessearch {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include adaptiveValue("margin-bottom", 70, 20);
+			@include adaptiveValue("margin-top", 70, 20);
+			gap: rem(10);
+
+			@media (max-width:$mobile) {
+				flex-direction: column;
+			}
+		}
+
+		&__categories {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: rem(12);
+			row-gap: rem(5);
+
+			& a {
+				color: #D7DADD;
+
+				@media (any-hover:hover) {
+					&:hover {
+						color: $linkColor;
+					}
+				}
+			}
+
+			& sup {
+				font-weight: 900;
+				font-size: rem(10);
+				line-height: 150%;
+			}
+		}
+
+		&__search {
+			border: 1px solid #D7DADD;
+			border-radius: 4px;
+			min-width: rem(300);
+
+			@media (max-width:$mobile) {
+				align-self: end;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			& input {
+				width: 100%;
+				padding: rem(12);
+			}
+		}
+
+		&__item {
+			flex-direction: column;
+
+			@media (any-hover:hover) {
+				&:hover {
+					img {
+						transition: all 0.3s ease 0s;
+						border: 1px solid #000;
+					}
+				}
+			}
+
+			@media (max-width: em(600)) {
+				flex-direction: row;
+			}
+		}
+
+		&__load {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptiveValue("margin-top", 80, 20);
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: 160%;
+			color: #424551;
+			gap: rem(16);
+			// @include adaptiveValue("margin-bottom", 120, 20);
+		}
+
+
+		.more {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(16);
+			flex-direction: row-reverse;
+
+			@media (any-hover:hover) {
+				&:hover {
+					cursor: pointer;
+					color: $linkColor;
+				}
+			}
+		}
+
+		&_icon-arrows {
+			transition: all 3s ease 0s;
+		}
+
+		._icon-arrows.active {
+			animation: load 3s;
+		}
+
+		@keyframes load {
+			0% {}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.item-courses {
+
+			&__img-ibg {
+				// flex: 0 0 100%;
+				padding-top: 240px;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				border-bottom-left-radius: 0;
+
+				& img {
+					object-position: none;
+					border-top-left-radius: 4px;
+					border-top-right-radius: 4px;
+					border-bottom-left-radius: 0;
+				}
+			}
+
+			&__content {}
+
+			&__top {}
+
+			&__center {}
+
+			&__bottom {}
+		}
+
+		&__dots {
+			transform: rotate(60deg);
+			position: absolute;
+			top: 170px;
+			right: -20px;
+
+			&>div {
+				background-color: #FFCF2D;
+			}
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+
+	.courses-page-items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: rem(30);
+
+		@media (max-width:$mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: em(600)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.courses {
+
+		&__top {}
+
+		&__items {}
+
+		&__item {}
+	}
+
+	.search-form {
+		padding-right: rem(12);
+	}
+
+	.search {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	._icon-search {}
+
+	._icon-search:before {
+		color: #D7DADD;
+	}
+
+	.courses-page {
+
+		&__2-1 {
+			position: absolute;
+			left: 56px;
+			top: 40%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+
+		&__2-2 {
+			position: absolute;
+			left: 77px;
+			top: 40%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+
+		&__2-3 {
+			position: absolute;
+			left: 100px;
+			top: 40%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+	}
+
+	.courses-page {
+
+		&__1-1 {
+			position: absolute;
+			right: 128px;
+			top: 60%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+
+		&__1-2 {
+			position: absolute;
+			right: 110px;
+			top: 59%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+
+		&__1-3 {
+			position: absolute;
+			right: 90px;
+			top: 58%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+
+		&__1-4 {
+			position: absolute;
+			right: 72px;
+			top: 57%;
+			pointer-events: none;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+	}

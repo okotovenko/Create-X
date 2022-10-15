@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Contacts</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-white.htm',{})
+		<section class="contact page">
+			<div class="contact__container">
+				<div class="contact__content">
+					<div class="contact__left">
+						<div class="contact__subtitle">Contact info</div>
+						<div class="contact__title title">Get in touch</div>
+						<div class="contact__info">
+							<div class="contact__mail">
+								<p class="contact__p _icon-message">Talk to us:</p>
+								<a class="contact__num" href="mailto: hello@createx.com">hello@createx.com</a>
+							</div>
+							<div class="contact__phone">
+								<p class="contact__p _icon-mobile">Call us:</p>
+								<a class="contact__num" href="tel: (405) 555-0128">(405) 555-0128</a>
+							</div>
+							<div class="contact__address">
+								<p class="contact__p _icon-place">Address:</p>
+								<p class="contact__num">2464 Royal Ln. Mesa, New Jersey 45463, USA</p>
+							</div>
+						</div>
+						<div class="contact__links">
+							<p class="contact__subtitle">Follow us:</p>
+							<div class="contact__link">
+								<a href="#" class="_icon-facebook"></a>
+								<a href="#" class="_icon-twitter"></a>
+								<a href="#" class="_icon-youtube"></a>
+								<a href="#" class="_icon-telegram"></a>
+								<a href="#" class="_icon-instagram"></a>
+								<a href="#" class="_icon-in"></a>
+							</div>
+						</div>
+					</div>
+					<div data-da=".contact__left,1024,3" class="contact__right-ibg">
+						<img src="@img/contacts-page/map.jpg" alt="map">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section data-prlx-parent class="question">
+			<div class="question__container">
+				<div class="question__content">
+					<div data-prlx data-direction='1' data-coefficient='300' class="question__left-ibg">
+						<img src="@img/contacts-page/1.png" alt="Image">
+					</div>
+					<div class="question__right">
+						<div class="question__subtitle subtitle">Any questions?</div>
+						<div class="question__title title">Drop us a line</div>
+						<form action="files/sendmail/sendmail.php" method="POST" class="question__form form-question">
+							<div class="form-question__firstname">
+								<p>First Name*</p>
+								<input type="text" placeholder="Your first name">
+							</div>
+							<div class="form-question__lastname">
+								<p>Last Name*</p>
+								<input type="text" placeholder="Your last name">
+							</div>
+							<div class="form-question__mail">
+								<p>E-mail*</p>
+								<input type="text" name="form[email]" data-error="Error" placeholder="Your working email"
+									class="input">
+							</div>
+							<div class="form-question__phone">
+								<p>Phone*</p>
+								<input type="number" placeholder="Your phone number">
+							</div>
+							<div class="form-question__message">
+								<p>Message*</p>
+								<textarea name="message" rows="5"></textarea>
+							</div>
+							<div class="event-form__checkbox">
+								<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1"
+									name="form[]">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">I agree to
+										receive communications from Createx Online School</span></label>
+							</div>
+							<button type="submit" class="button button-maincolor">Send message</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+	<!-- <script src="js/app.min.js"></script> -->
+</body>
+
+</html>

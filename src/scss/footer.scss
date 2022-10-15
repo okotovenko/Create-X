@@ -62,6 +62,18 @@
 		@media (max-width: em(600)) {
 			display: none;
 		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $linkColor;
+			}
+		}
+	}
+
+	ul {
+		& li:not(:last-child) {
+			margin-bottom: rem(8);
+		}
 	}
 }
 
@@ -126,9 +138,39 @@
 		}
 	}
 
-	._icon-arrow-long {
-		color: red;
+	._icon-arrow-long::before {
 		transform: rotate(180deg);
+		// color: red;
+	}
+
+	form {
+		width: 100%;
+		padding-right: rem(12);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.12);
+		border-radius: 4px;
+		display: flex;
+		gap: rem(5);
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	._icon-facebook,
+	._icon-twitter,
+	._icon-youtube,
+	._icon-telegram,
+	._icon-instagram,
+	._icon-in {
+		@media (any-hover:hover) {
+			&:hover {
+				cursor: pointer;
+
+				&::before {
+					color: #fff;
+				}
+			}
+		}
 	}
 }
 
@@ -146,11 +188,23 @@
 	}
 }
 
-ul {
-	& li:not(:last-child) {
-		margin-bottom: rem(8);
+.courses-spollers__body,
+.site-spollers__body {
+	& a {
+		@media (any-hover:hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
 	}
 }
+
+
+// ul {
+// 	& li:not(:last-child) {
+// 		margin-bottom: rem(8);
+// 	}
+// }
 
 .site-spollers__item,
 .courses-spollers__item,
@@ -162,17 +216,7 @@ ul {
 	align-items: start;
 }
 
-form {
-	width: 100%;
-	padding-left: rem(12);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	background: rgba(255, 255, 255, 0.12);
-	border-radius: 4px;
-	display: flex;
-	gap: rem(5);
-	justify-content: space-between;
-	align-items: center;
-}
+
 
 
 .input {
@@ -182,32 +226,17 @@ form {
 	position: relative;
 }
 
+// ._icon-arrow-long::before,
 ._icon-facebook::before,
 ._icon-twitter::before,
 ._icon-youtube::before,
 ._icon-telegram::before,
 ._icon-instagram::before,
-._icon-in::before,
-._icon-arrow-long::before {
+._icon-in::before {
 	color: #5C5E67;
 }
 
-._icon-facebook,
-._icon-twitter,
-._icon-youtube,
-._icon-telegram,
-._icon-instagram,
-._icon-in {
-	@media (any-hover:hover) {
-		&:hover {
-			cursor: pointer;
 
-			&::before {
-				color: #fff;
-			}
-		}
-	}
-}
 
 ._icon-mobile::before,
 ._icon-mail::before {

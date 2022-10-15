@@ -1,0 +1,405 @@
+.lectures {
+	background: #fff;
+	@include adaptiveValue("padding-top", 180, 20);
+	@include adaptiveValue("padding-bottom", 180, 20);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__subtitle {}
+
+	&__title {}
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		align-self: stretch;
+		align-items: center;
+		column-gap: rem(40);
+		row-gap: rem(20);
+		justify-content: space-between;
+		margin: rem(60) rem(0);
+
+		@media (max-width: em(1200)) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		@media (max-width: em(700)) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+		@include adaptiveValue("margin-bottom", 60, 20);
+	}
+
+	&__items.active {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		width: 100%;
+		@include adaptiveValue("gap", 30, 10);
+
+		@media (max-width:$mobile) {
+			grid-template-columns: repeat(2, 1fr);
+
+			.date-list {
+				align-self: start;
+			}
+		}
+
+		@media (max-width:$mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		border: 1px solid #E5E8ED;
+		border-radius: 4px;
+
+		@media (any-hover:hover) {
+			&:hover {
+				box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+			}
+		}
+
+		@media (max-width:$mobile) {
+			align-items: center;
+			// text-align: center;
+		}
+
+		.text-lections-list {
+			@media (max-width:$mobile) {
+				align-items: center;
+				text-align: center;
+			}
+		}
+	}
+
+
+
+	&__item.active {
+		// flex: 0 1 33.333%;
+		// width: 33.333%;
+		flex-direction: column;
+		@include adaptiveValue("padding-top", 24, 10);
+		@include adaptiveValue("padding-bottom", 24, 10);
+		@include adaptiveValue("padding-right", 24, 10);
+		@include adaptiveValue("padding-left", 24, 10);
+
+		.item-lectures__date {
+			grid-template-columns: 0.1fr 0.5fr 1fr;
+			grid-template-rows: 2fr 1fr;
+			font-weight: 700;
+			font-size: rem(28);
+			line-height: 150%;
+			color: $linkColor;
+		}
+
+		.item-lectures__number {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+			font-weight: 700;
+			font-size: rem(28);
+			line-height: 150%;
+			color: $linkColor;
+		}
+
+		.item-lectures__month {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			color: $linkColor;
+			align-self: center;
+		}
+
+		.item-lectures__time {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+		}
+
+		.item-lectures__text {
+			padding: 0;
+			margin-top: rem(20);
+		}
+
+		.item-lectures__button {
+			align-self: stretch;
+			margin-top: rem(50);
+		}
+
+		@media (max-width:$mobile) {
+			.text-lections-list {
+				@media (max-width:$mobile) {
+					align-items: flex-start;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.lectures-page {
+	position: relative;
+
+	.dots {
+		transform: rotate(-52.46deg);
+		position: absolute;
+		// left: -4%;
+		left: 0;
+		top: 200px;
+
+		&>div {
+			background-color: #FFCF2D;
+		}
+	}
+
+	&__circle {}
+
+	.circle-222 {
+		right: -111px;
+		bottom: 15%;
+		border-color: #FFCF2D;
+	}
+
+	.circle-284 {
+		right: -142px;
+		bottom: 14%;
+		border-color: #FFCF2D;
+	}
+
+}
+
+
+.page {}
+
+.subtitle {}
+
+.title {}
+
+.form-lectures {
+
+	&__category,
+	&__sort,
+	&__show,
+	&__search,
+	&__icons {
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+	}
+
+	& input,
+	& select {
+		border: 1px solid #D7DADD;
+		border-radius: 4px;
+		padding: rem(12) rem(15);
+		font-size: rem(14);
+		line-height: 150%;
+		cursor: pointer;
+	}
+
+
+	&__category {
+		@media (max-width: em(1200)) {
+			grid-row: 2 / 3;
+			grid-column: 1 / 2;
+		}
+
+		@media (max-width: em(700)) {
+			grid-row: 3 / 4;
+			grid-column: 1 / 2;
+		}
+	}
+
+
+	&__sort {
+		@media (max-width: em(1200)) {
+			grid-row: 2 / 3;
+			grid-column: 2 / 3;
+		}
+
+		@media (max-width: em(700)) {
+			grid-row: 4 / 5;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&__show {
+		@media (max-width: em(1200)) {
+			grid-row: 1 / 2;
+			grid-column: 1 / 2;
+		}
+
+		@media (max-width: em(700)) {
+			grid-row: 2 / 3;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&__form {
+		position: relative;
+		border: 1px solid #E5E8ED;
+
+
+		& input {
+			text-align: center;
+			max-width: rem(50);
+			border: none;
+		}
+
+		._icon-triangle-down::before,
+		._icon-triangle-up::before {
+			position: absolute;
+			right: 5px;
+			cursor: pointer;
+		}
+
+		._icon-triangle-down::before {
+			bottom: 10px;
+		}
+
+		._icon-triangle-up::before {
+			top: 10px;
+		}
+	}
+
+	&__arrow {}
+
+	&__search {
+		& form {
+			border: 1px solid #E5E8ED;
+			cursor: pointer;
+
+			& input {
+				border: none;
+			}
+		}
+
+		@media (max-width: em(1200)) {
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
+		}
+
+		@media (max-width: em(700)) {
+			grid-row: 1 / 2;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&__icons {
+		justify-content: end;
+
+		@media (max-width: em(1200)) {
+			grid-row: 1 / 2;
+			grid-column: 3 / 4;
+		}
+
+		@media (max-width: em(700)) {
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
+		}
+	}
+
+
+
+	& p {
+		font-weight: 700;
+		line-height: 160%;
+		color: $colorDark;
+		white-space: nowrap;
+	}
+
+	& span {
+		color: #787A80;
+	}
+}
+
+._icon-list,
+._icon-tile {
+	@media (any-hover:hover) {
+		&:hover {
+			color: $linkColor;
+		}
+	}
+}
+
+._icon-list::before,
+._icon-tile::before {
+	cursor: pointer;
+	font-size: rem(20);
+}
+
+._icon-list::before {
+	// color: $linkColor;
+}
+
+._icon-tile.active,
+._icon-list.active {
+	color: $linkColor;
+}
+
+.search-form {}
+
+.search {}
+
+.icons-form-lectures {}
+
+.item-lections-list {}
+
+.item-lectures {
+
+	&__date {}
+
+	&__number {}
+
+	&__month {}
+
+	&__time {}
+
+	&__text {}
+
+	&__button {
+		align-self: center;
+	}
+}
+
+.date-list {}
+
+.number-list {}
+
+.month-list {}
+
+.time-list {}
+
+.text-lections {}
+
+.text-lections-list {}
+
+.text-lectures {
+
+	&__title {}
+
+	&__subtitle {}
+}
+
+.title-list {}
+
+.subtitle-list {}
+
+.button {}
+
+.button-transparent {}
